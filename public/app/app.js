@@ -1,0 +1,1 @@
+var recetCtrl = angular.module('myApp', ['appRoutes', 'mainCltr', 'authService', 'userCltr', 'userService']);

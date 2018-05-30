@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+
+	
+</head>
+<body>
+	<div id="tbl">
+
+    </div>
+
+    <script >
+
+            /*
+             * Instructions:
+             * Render a table containing 3 columns: (1) the ticker symbol (2) current value 
+             * (3) a red star if the momentum is <0 and a green star if it is >0
+             */
+             
+            const collection = [
+             {'symbol': 'ARKQ', 'value': '25.39', 'volume': '16m', 'momentum': '23'},
+             {'symbol': 'ARKQ', 'value': '8.20', 'volume': '1.5m', 'momentum': '-48'},
+             {'symbol': 'ARKQ', 'value': '32.98', 'volume': '12m', 'momentum': '89'},
+            ]
+            
+            var tabl = ``;
+            
+            collection.forEach(function(element,i) {
+              //console.log(element.symbol);
+                if(i==0){
+                    tabl +=`<table><tr><th>symbol</th><th>value</th>	<th>momentum</th></tr>`;
+                tabl += `<tr><td>${element.symbol}</td><td>${element.value}</td><td>${element.momentum}</td></tr>`;
+                }else{
+                    tabl += `<tr><td>${element.symbol}</td><td>${element.value}</td><td>${element.momentum}</td></tr>`;
+                }
+            });
+            
+            tabl += `</table>`;
+            //console.log(tabl);
+            document.getElementById("tbl").innerHTML=tabl;
+                </script>
+</body>
+</html>
